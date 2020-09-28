@@ -4,6 +4,7 @@ import Button from './components/Button';
 import ToDoTask from './components/ToDoTask';
 import {Container, Form, TaskList} from './styles';
 import TaskItemProps from './interfaces/TaskItemProps';
+import {addItem, getListAsObject} from './services/LocalStorageService';
 
 import rightArrowGray from './icons/right-arrow-gray.svg';
 import rightArrowGreen from './icons/right-arrow-green.svg';
@@ -19,17 +20,14 @@ function App() {
   function handleAddList(event:FormEvent) {
     event.preventDefault();
     
+    addItem(task);
     var localToDoList = toDoList.concat(task);
     setToDoList(localToDoList);
     setTask(TaskItemDefault);
-    localStorage.setItem("@todoluby/tasks", JSON.stringify(localToDoList));
   }
 
   useEffect(()=>{
-    var localToDoList = localStorage.getItem("@todoluby/tasks");
-    var localList = localToDoList ? JSON.parse(localToDoList) : [];
-    
-    setToDoList(localList);
+    setToDoList(getListAsObject());
   },[]);
 
   
@@ -47,9 +45,9 @@ function App() {
       </Form>
 
       <TaskList>
-        {toDoList.map(item => 
+        {toDoList.map((item, index) => 
           (
-            <ToDoTask item={item}/>
+            <ToDoTask key={index} index={index} item={item}/>
           ))}
       </TaskList>
       
