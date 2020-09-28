@@ -1,16 +1,20 @@
 import React from 'react';
+import TaskItemProps from '../../interfaces/TaskItemProps';
+
+import circleChecked from './icons/circle-checked.svg';
+import circleEmpty from './icons/circle-empty.svg';
 
 interface ToDoTaskProps {
-    name: string;
-    checked: boolean;
+    item: TaskItemProps;
 }
 
+
 const ToDoTask:React.FC<ToDoTaskProps> = (props) => {
-    const {name, checked} = props;
+    const {item} = props;
 
     return (
         <>
-        {name}
+        {item.name}
         </>
     )
 }
