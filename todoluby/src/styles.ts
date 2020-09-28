@@ -5,10 +5,10 @@ export const Container = styled.div `
     text-align: center;
     display:flex;
     flex:1;
-    height: 100%;
-    min-height: 100vh;
+    height: 100vh;
     flex-direction: column;
     padding: 0 1rem;
+    overflow:hidden;
 
     h1 {
         text-align: center;
@@ -29,4 +29,10 @@ export const Form = styled.form`
         flex:1;
         padding-top: 5px;
     }
+`;
+
+export const TaskList = styled.div`
+    display:flex;
+    flex-direction: column;
+    overflow:auto
 `;

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Container from './styles';
 import TaskItemProps from '../../interfaces/TaskItemProps';
 
-import circleChecked from './icons/circle-checked.svg';
-import circleEmpty from './icons/circle-empty.svg';
+import circleChecked from '../../icons/circle-checked.svg';
+import circleEmpty from '../../icons/circle-empty.svg';
 
 interface ToDoTaskProps {
     item: TaskItemProps;
@@ -11,11 +12,16 @@ interface ToDoTaskProps {
 
 const ToDoTask:React.FC<ToDoTaskProps> = (props) => {
     const {item} = props;
+    const [checked, setChecked] = useState(item.checked);
 
+    function handleCheck() {
+        setChecked(!checked);
+    }
     return (
-        <>
-        {item.name}
-        </>
+        <Container onClick={handleCheck}>
+            <img src={checked ? circleChecked : circleEmpty} className="check-icon" alt=""/>
+            <p className={checked ? "checked" : ""}>{item.name}</p>
+        </Container>
     )
 }
 

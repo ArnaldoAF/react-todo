@@ -2,7 +2,7 @@ import React, { FormEvent, useEffect, useState } from 'react';
 import TextInput from './components/TextInput';
 import Button from './components/Button';
 import ToDoTask from './components/ToDoTask';
-import {Container, Form} from './styles';
+import {Container, Form, TaskList} from './styles';
 import TaskItemProps from './interfaces/TaskItemProps';
 
 import rightArrowGray from './icons/right-arrow-gray.svg';
@@ -46,14 +46,12 @@ function App() {
          </Button>
       </Form>
 
-      <ul>
+      <TaskList>
         {toDoList.map(item => 
           (
-            <li>
-              <ToDoTask item={item}/>
-            </li>
+            <ToDoTask item={item}/>
           ))}
-      </ul>
+      </TaskList>
       
 
 
