@@ -36,3 +36,17 @@ export const TaskList = styled.div`
     flex-direction: column;
     overflow:auto
 `;
+
+export const Options = styled.div`
+    display: grid;
+    grid-auto-flow: column;
+    margin: 1rem 0;
+
+    button {
+        padding: 0.5rem;
+        border-radius:8px
+    }
+    img {
+        width: 2.5rem;
+    }
+`;

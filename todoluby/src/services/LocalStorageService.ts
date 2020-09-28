@@ -1,5 +1,10 @@
 import  React from 'react';
 import TaskItemProps from "../interfaces/TaskItemProps";
+import { OrderByProperty } from '../utils/OrderByProperty';
+
+var orderByNameAsc = true;
+var orderByCheckedAsc = true;
+
 
 
 export function  getListString():string {
@@ -65,5 +70,29 @@ export function deleteItem(index: number) {
     var localList = getListAsObject();
     localList.splice(index,1);
     setList(localList);
+}
+
+export function OrderByName():TaskItemProps[] {
+    console.log("OrderByName");
+    var localList = getListAsObject();
+    var orderedList = OrderByProperty(localList, "name");
+    setList(orderedList);
+    return orderedList;
+}
+
+export function OrderByChecked() {
+    console.log("OrderByChecked");
+    var localList = getListAsObject();
+    var orderedList = OrderByProperty(localList, "checked");
+    setList(orderedList);
+    return orderedList;
+}
+
+export function DeleteMarked() {
+    console.log("DeleteMarked");
+    var localList = getListAsObject();
+    var cleanList = localList.filter(task => !task.checked);
+    setList(cleanList);
+    return cleanList;
 }
 
