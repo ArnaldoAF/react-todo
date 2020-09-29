@@ -6,9 +6,7 @@ const TextInput:React.FC< InputHTMLAttributes<HTMLInputElement>> = (props) => {
     const {...rest}  = props
 
     return (
-        
-            <Input {...rest}/>
-        
+        <Input {...rest}/>
     )
 }
 

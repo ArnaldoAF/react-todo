@@ -5,6 +5,8 @@ const ButtonStyle = styled.button`
     border-radius: 0px 8px 8px 0px;
     box-sizing: border-box;
     background: #04D361;
+    cursor:pointer;
+    outline: none;
 
     &:disabled {
         background: #DCDCE6;

@@ -5,7 +5,7 @@ const Container = styled.div`
     padding: 0.5rem 0rem;
     font-size: 2.5rem;
     border-bottom: 1px solid #32264D;
-    
+    cursor:pointer;
 
     img {
         width: 2rem;
@@ -13,6 +13,7 @@ const Container = styled.div`
     }
 
     p {
+        font-family: 'Roboto', sans-serif;
         font-size: 2.5rem;
         margin:0;
         text-align: left;

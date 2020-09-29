@@ -10,6 +10,8 @@ export const Input = styled.input `
     padding: 0.5rem;
     border-right: none;
     border-radius: 8px 0px 0px 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 
     &:focus {
         outline: none;
