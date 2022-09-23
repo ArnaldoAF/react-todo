@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React To Do App
+
+This is a to do list made with React to expand my skills in programming
 
 ## Available Scripts
 
