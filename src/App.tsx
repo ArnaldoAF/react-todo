@@ -73,8 +73,8 @@ function App() {
         <Form action="" onSubmit={handleAddList}>
           
           <TextInput type="text" onChange={(event) => setTask({name: event.target.value, checked:false})} value={task.name}/>
-          <Button type="submit" disabled={task.name.length < 5}> 
-            <img src={(task.name.length < 5) ? rightArrowGray : rightArrowGreen} className="enter-icon"alt=""/>
+          <Button type="submit" disabled={task.name.length < 1}> 
+            <img src={(task.name.length < 1) ? rightArrowGray : rightArrowGreen} className="enter-icon"alt=""/>
           </Button>
         </Form>
 
