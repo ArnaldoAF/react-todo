@@ -15,7 +15,6 @@ import sortList from './icons/sort-list.svg';
 import sortAZ from './icons/sort-a-z.svg';
 import deleteAll from './icons/delete-all.svg';
 import list from './icons/list.svg';
-import logo from './images/Logo_Luby.png';
 
 function App() { 
   const TaskItemDefault = {
@@ -69,8 +68,8 @@ function App() {
       <Container className="App">
       
         
-        <p>TODO <img src={logo} alt=""/> </p>
-        <p className="by">feito por: <a href="https://www.linkedin.com/in/arnaldo-assis-ferreira/">Arnaldo Assis Ferreira </a> </p>
+        <p>React TO DO app</p>
+        <p className="by">feito por: <a href="https://github.com/ArnaldoAF/">Arnaldo Assis Ferreira </a> </p>
         <Form action="" onSubmit={handleAddList}>
           
           <TextInput type="text" onChange={(event) => setTask({name: event.target.value, checked:false})} value={task.name}/>
