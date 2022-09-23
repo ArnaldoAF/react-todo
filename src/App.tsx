@@ -80,16 +80,20 @@ function App() {
 
         <Options>
             <Button onClick={handleSortAZ}>
-              <img src={sortAZ} alt=""/>
+                <img src={sortAZ} alt=""/>
+                <span>ordenar AZ</span>
             </Button>
             <Button onClick={handleSortChecked}>
                 <img src={sortList} alt=""/>
+                <span>ordenar por completo</span>
             </Button>
             <Button onClick={handleDeleteMarked}>
                 <img src={list} alt=""/>
+                <span>deletar completos</span>
             </Button>
             <Button onClick={handleClean}>
                 <img src={deleteAll} alt=""/>
+                <span>limpar lista</span>
             </Button>
 
         </Options>

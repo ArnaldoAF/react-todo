@@ -7,9 +7,16 @@ const ButtonStyle = styled.button`
     background: #04D361;
     cursor:pointer;
     outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &:disabled {
         background: #DCDCE6;
+    }
+
+    & span {
+        margin-top: 0.5rem;
     }
 `;
 

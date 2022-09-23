@@ -69,6 +69,7 @@ export const Options = styled.div`
     grid-auto-flow: column;
     margin: 1rem 0;
     grid-gap: 1rem;
+    grid-auto-columns: minmax(0, 1fr);
 
     button {
         padding: 0.5rem;
